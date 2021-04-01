@@ -1,0 +1,32 @@
+# Macro file: run.mac
+/run/verbose 1
+/tracking/verbose 1
+
+## GPS point 
+#/gps/particle gamma
+#/gps/pos/type Point
+#/gps/pos/centre 0 0 0 cm
+#/gps/direction 0 0 1
+#/gps/energy 2.0 MeV
+
+## GPS line
+#/gps/particle gamma
+#/gps/pos/type Plane
+#/gps/pos/shape Square
+#/gps/pos/centre 0 0 0 cm
+#/gps/pos/halfx 0 cm 
+#/gps/pos/halfy 5 cm
+#/gps/direction 0 0 1
+#/gps/energy 2.0 MeV
+
+## GPS iso 
+#/gps/particle gamma
+#/gps/pos/type Point
+#/gps/pos/centre 0 0 0 cm 
+#/gps/ang/type iso
+#/gps/energy 2.0 MeV
+
+
+
+/run/beamOn 10
+
