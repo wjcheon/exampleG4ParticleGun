@@ -37,14 +37,14 @@ PrimaryGeneratorAction::PrimaryGeneratorAction():
 {
 
 //    // Particle Gun
-    fPrimary = new G4ParticleGun();
-	fPrimary->SetParticleDefinition(G4ParticleTable::GetParticleTable()->FindParticle("proton"));
-	fPrimary->SetParticleEnergy(6.0*MeV);
-	fPrimary->SetParticlePosition((G4ThreeVector(0.0*cm, 0.0*cm, 0.0*cm)));
-	fPrimary->SetParticleMomentumDirection(G4ThreeVector(0.0,0.0,1.0));
+//    fPrimary = new G4ParticleGun();
+//	fPrimary->SetParticleDefinition(G4ParticleTable::GetParticleTable()->FindParticle("proton"));
+//	fPrimary->SetParticleEnergy(6.0*MeV);
+//	fPrimary->SetParticlePosition((G4ThreeVector(0.0*cm, 0.0*cm, 0.0*cm)));
+//	fPrimary->SetParticleMomentumDirection(G4ThreeVector(0.0,0.0,1.0));
 
 	// General particle source
-//	fPrimary = new G4GeneralParticleSource();
+	fPrimary = new G4GeneralParticleSource();
 
 }
 
@@ -56,11 +56,11 @@ PrimaryGeneratorAction::~PrimaryGeneratorAction()
 void PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
 {
 //	// Line
-	G4double yPos = -5.0*cm+ (G4UniformRand()*10.0*cm);
-	fPrimary->SetParticlePosition(G4ThreeVector(0.0*cm, yPos, 0.0*cm));
+//	G4double yPos = -5.0*cm+ (G4UniformRand()*10.0*cm);
+//	fPrimary->SetParticlePosition(G4ThreeVector(0.0*cm, yPos, 0.0*cm));
 //
 //	//Iso
-	fPrimary->SetParticleMomentumDirection(G4RandomDirection());
+//	fPrimary->SetParticleMomentumDirection(G4RandomDirection());
 
 
     fPrimary->GeneratePrimaryVertex(anEvent);

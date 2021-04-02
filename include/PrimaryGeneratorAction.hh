@@ -46,10 +46,10 @@ public:
 	virtual void GeneratePrimaries(G4Event*);
 private:
     // Particle Gun
-    G4ParticleGun* fPrimary;
+//    G4ParticleGun* fPrimary;
 
     // Gerneral particle source
-//    G4GeneralParticleSource* fPrimary;
+    G4GeneralParticleSource* fPrimary;
 
 };
 
